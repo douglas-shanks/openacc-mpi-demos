@@ -4,6 +4,8 @@ OpenACC/MPI Demos
 These demos use OpenACC and MPI to run SAXPY in various contexts.
 
 
+# This is just an update for AMD GPUs of Ronald Rahaman's original material.
+
 Contents
 --------
 
@@ -19,7 +21,7 @@ Contents
 * **saxpy\_acc\_mpi** runs SAXPY with multiple MPI processes.  Each process
   offloads its local work to GPU using OpenACC kernels.  The MPI scheme is the
   same as saxpy\_mpi, and the length of the global problem must be evenly
-  divisible by the number of MPI ranks.  The number of NVIDIA-capable GPUs can
+  divisible by the number of MPI ranks.  The number of GPUs can
   be arbitrarily >= 1; each rank's kernels will be round-robin scheduled on the
   available GPUs.
 
@@ -27,17 +29,19 @@ Contents
 Building
 --------
 
-Ensure that the `mpif90` in your path uses pgfortran.  Then simply run `make all`.
+Simply run `make all`.
 
 
 Running
 -------
 
-MPI programs are run as usual, e.g: `mpirun -np 2 ./saxpy_acc_mpi`
+MPI programs are run as usual, e.g: `srun -n 2 ./saxpy_acc_mpi`
 
 
 Profiling
 ---------
+
+# Update for AMD
 
 The nvprof users' manual describes how to profile and visualize MPI sessions:
 
