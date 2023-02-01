@@ -8,6 +8,6 @@ all: $(OBJ)
 	$(FC) $(FFLAGS) $^ -o $@
 
 clean:
-	rm -f $(OBJ) *.mod *.o
+	rm -f $(OBJ) *.mod *.o *.acc.s
 
 .PHONY: clean
