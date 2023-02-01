@@ -2,9 +2,7 @@ OpenACC/MPI Demos
 =================
 
 These demos use OpenACC and MPI to run SAXPY in various contexts.
-
-
-# This is just an update for AMD GPUs of Ronald Rahaman's original material.
+This is just an update for AMD GPUs of Ronald Rahaman's original material.
 
 Contents
 --------
@@ -41,7 +39,7 @@ MPI programs are run as usual, e.g: `srun -n 2 ./saxpy_acc_mpi`
 Profiling
 ---------
 
-# Update for AMD
+*Update for AMD*
 
 The nvprof users' manual describes how to profile and visualize MPI sessions:
 
